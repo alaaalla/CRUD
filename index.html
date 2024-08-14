@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container py-5">
+        <h1 class="text-white">Product Management System</h1>
+        <div class="form-group my-2">
+            <label class="text-white" for="product">productName</label>
+            <input oninput="validateName()" type="text" name="" id="productName" class="form-control"
+                placeholder="Enter Product Name">
+            <p id="invalidName" class="text-danger d-none">Please enter a valid name with a first capitale character</p>
+        </div>
+        <div class="form-group my-2">
+            <label class="text-white" for="product">productPrice</label>
+            <input oninput="validatePrice()" type="number" name="" id="productPrice" class="form-control"
+                placeholder="Enrer Product Price">
+            <p id="invalidNumber" class="text-danger d-none">Please enter a valid number </p>
+        </div>
+        <div class="form-group my-2">
+            <label class="text-white" for="product">productCategory</label>
+            <input oninput="validateCategory()" type="text" name="" id="productCategory" class="form-control"
+                placeholder="Enter Product Category" required>
+            <p id="invalidCategory" class="text-danger d-none">Please enter a valid name with a first capitale character
+            </p>
+        </div>
+
+        <div class="form-group my-2">
+            <label class="text-white" for="product">productDescription</label>
+            <input oninput="validateDesc()" name="" id="productDescription" class="form-control"
+                placeholder="Enrer Product Description">
+            <p id="invalidDescription" class="text-danger d-none">Please enter a valid name with a first capitale
+                character</p>
+        </div>
+        <button onclick="addProduct()" class="btn btn-outline-primary my-3">Add Product</button>
+        <button class="btn btn-outline-light d-none" id="save" onclick="saveUpdate()">Save Changes</button>
+        <input type="text" class="form-control" placeholder="Search with product name"
+            oninput="searchProduct(this.value)">
+        <br>
+        <div class="inner">
+            <table class="table text-center text-white">
+                <thead>
+                    <th>index</th>
+                    <th>product Name</th>
+                    <th>product Price</th>
+                    <th>product Category</th>
+                    <th>product Description</th>
+                    <th>product Update</th>
+                    <th>product Delete</th>
+                </thead>
+                <tbody id="demo">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

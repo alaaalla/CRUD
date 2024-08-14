@@ -1,0 +1,12 @@
+body {
+    background-image: url(../imgs/ioqbslev.png);
+    background-size: cover;
+    margin: auto;
+    background-position: center center;
+}
+
+.inner {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    padding: 50px 15px;
+}
